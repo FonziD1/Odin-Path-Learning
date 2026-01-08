@@ -1,0 +1,108 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background: #f5f5f5;
+  font-family: sans-serif;
+}
+
+.container {
+  display: flex;
+  flex-direction: row; /* fixed this */
+  justify-content: space-around;
+  align-items: center;
+  background-color: antiquewhite;
+  margin: 50px;
+  flex-wrap: wrap;
+  padding: 20px;
+  border-radius: 20px;
+  box-shadow: 0 10px 20px rgba(129, 59, 175, 0.7),
+              0 -10px 20px rgba(0, 0, 0, 0.3);
+  gap: 20px;
+}
+
+.player-container,
+.computer-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.player img,
+.computer-container > img {
+  border-radius: 20px;
+  object-fit: fit;
+}
+
+.choices {
+  display: flex;
+  justify-content: center;
+  margin-top: 10px;
+}
+
+.choice img,
+.choice-computer img {
+  margin: 5px;
+  width: 85px;
+  height: 85px;
+  border-radius: 20px;
+  transition: all 0.2s ease;
+}
+
+.choice img:hover {
+  cursor: pointer;
+  border: 2px solid green;
+  transform: scale(1.2);
+}
+
+.choice-computer img:hover{
+    cursor: none;
+}
+.vs img {
+  width: 70px;
+  height: auto;
+  display: block;
+}
+
+.pick {
+  margin: 10px;
+  background-color: whitesmoke;
+  padding: 10px;
+  border-radius: 10px;
+  color: steelblue;
+  font-weight: bold;
+  font-family: 'Rubik';
+  text-decoration: underline;
+  font-size: 20px;
+   box-shadow: 0 10px 20px rgba(129, 59, 175, 0.7),
+              0 -10px 20px rgba(0, 0, 0, 0.3);
+}
+
+.btn {
+  background-color: orangered;
+  font-size: 30px;
+  color:rgba(0, 0, 0, 0.5);
+  font-family: monospace;
+  padding: 10px;
+  margin: 50% auto;
+}
+
+
+.winner-container {
+  background-color: antiquewhite;
+  border-radius: 10px;
+  padding: 20px;
+  color:rgba(0, 0, 0, 0.9);
+  font-weight: 600;
+  text-align: center;
+  margin: 50px;
+    box-shadow: 0 10px 20px rgba(129, 59, 175, 0.7),
+              0 -10px 20px rgba(0, 0, 0, 0.3);
+                display: flex;
+  justify-content: center;   /* centers horizontally */
+  align-items: center;       /* centers vertically if it has height */
+  
+}
