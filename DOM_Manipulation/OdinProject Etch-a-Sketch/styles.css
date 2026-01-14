@@ -1,12 +1,57 @@
-.square {
-    border: 1px solid #000;
-    background-color: white;
-    width: 50px;
-    height: 50px;
+* {
+    box-sizing: border-box;
 }
+
+body {
+    flex-direction: column;
+    margin: 0;
+    padding: 0;
+    background-color: grey;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
 .square-container {
     display: flex;
     flex-wrap: wrap;
-    width: 100vw;
-    height: 100vh;
+    width: 400px;
+    height: 400px;
+    background-color: #fff;
+    border: 5px solid #333;
+    overflow: wrap;
+}
+
+
+.square {
+    border: 1px solid #000;
+    background-color: white;
+    width: 25px;
+    height: 25px;
+    transition: background-color 0.5s ease-in-out;
+}
+
+#grid-selector {
+    margin: 20px;
+    padding: 10px;
+    font-size: 16px;
+    font-weight: bold;
+    color: #444;
+    background-color:antiquewhite;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+#grid-clear {
+    margin: 20px;
+    padding: 10px;
+    font-size: 16px;
+    font-weight: bold;
+    color: #444;
+    background-color: antiquewhite;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
 }

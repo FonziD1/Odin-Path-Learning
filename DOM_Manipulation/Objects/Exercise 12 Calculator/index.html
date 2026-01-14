@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+</head>
+<body>
+    
+    <script>
+        //Calculator class
+        class Calculator {
+            constructor(valueA, valueB){
+                this.valueA = valueA;
+                this.valueB = valueB;
+            }
+            add(){
+                return this.valueA + this.valueB;
+            }
+
+            subtract() {
+                return this.valueA - this.valueB;
+            }
+
+            multiply(){
+                return this.valueA * this.valueB;
+            }
+            divide(){
+                return this.valueA / this.valueB;
+            }
+            power(){
+                return this.valueA ** this.valueB;
+            }
+            factorial(n){
+                if (n ===0 || n ===1){
+                    return 1;
+                } else {
+                    return n*this.factorial(n-1);
+                }
+            }
+
+        }
+        const calc = new Calculator(5,3);
+
+        const calculator = {
+            add(a,b) {return a + b;},
+            subtract(a,b) {return a - b;},
+            multiply(a,b) {return a * b;},
+            divide(a,b) {return a / b;},
+            power(a,b) {return a ** b;},
+            factorial(n) {
+                if (n ===0 || n ===1){
+                    return 1;
+                } else {
+                    return n*this.factorial(n-1);
+                }
+            }
+        }
+        const resultArray = [
+        calculator.add(10+5, 3),
+        calculator.subtract(10+5, 3),
+        calculator.multiply(10+5, 3),
+        calculator.divide(10+5, 3),
+        calculator.power(10+5, 3),              
+        calculator.factorial(5),
+           ];
+console.log(resultArray);
+    </script>
+</body>
+</html>

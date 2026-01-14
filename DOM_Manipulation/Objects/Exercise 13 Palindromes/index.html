@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Palindrome</title>
+  </head>
+  <body>
+    <script>
+      const isPalindrome = (str) => {
+        const cleanedStr = str.replace(/[^A-Za-z0-9]/g, "").toLowerCase();
+        const reversedStr = cleanedStr.split("").reverse().join("");
+        return cleanedStr === reversedStr;
+      };
+      const palindromes = [
+        "A car, a man, a maraca",
+        "Rats live on no evil star",
+        "No lemon, no melon.",
+        "Lid off a daffodil.",
+        "Animal loots foliated detail of stool lamina.",
+        "A nut for a jar of tuna.",
+      ];
+
+      }palindromes.forEach((phrase) => {
+        console.log(isPalindrome(phrase));
+      })
+
+      console.log("All palindromes checked.");
+
+      const secondIsPalindrome(str){
+        const reversed = (str) => {
+            const reversedStr = "";
+            for(let i = str.length -1; i >= 0; i--){
+                reversedStr += str[i];  
+            }
+            return reversedStr;
+        
+      }
+    </script>
+  </body>
+</html>
