@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Oldest</title>
+</head>
+<body>
+    
+    <script>
+        const people = [
+    {name: 'John', year: 1980, passed: 2020},   
+    {name: 'Jane', year: 1975, passed: 2015},
+    {name: 'Jim', year: 1990, passed: 2050},
+    {name: 'Jill', year: 1960, passed: 2010}
+];                      
+        const findOldest = people.reduce((oldest, person) => {
+            const oldestAge = oldest.passed - oldest.year;
+            const personAge = person.passed - person.year;
+            return personAge > oldestAge ? person : oldest;
+        });
+        console.log(findOldest);
+
+        const findYoungest = () => {
+            let youngest = people[0];
+            for (let i =0; i < people.length; i++){
+                const youngestAge = youngest.passed - youngest.year;
+                const personAge = people[i].passed - people[i].year;
+                if (personAge < youngestAge){
+                    youngest = people[i];
+                }
+            }
+            return youngest;
+        }
+        const youngestPerson = findYoungest();
+        console.log(youngestPerson);
+    </script>
+</body>
+</html>
