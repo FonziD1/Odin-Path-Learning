@@ -23,36 +23,51 @@
 #display {
     max-width: 500px;
     max-height: 250px;
-    width: 270px;
+    width: 210px;
+    max-width: 350px;
     height: 80px;
     background: var(--background-color);
     border-radius: 20px;
+    box-shadow:
+        0 0 10px rgba(0, 0, 0, 0.75),
+        0 0 25px rgba(18, 127, 223, 0.752);
+
 }
 
 #buttons {
     display: grid;
     align-items: center;
     justify-content: center;
-    padding-left: 10px;
     row-gap: 2px;
+    margin: 15px;
     column-gap: 5px;
+    padding: 10px 0;
     grid-template-columns: repeat(3, 50px);
-    grid-template-rows: repeat(6, 50px);
-    width: 270px;
+    grid-template-rows: repeat(7, 50px);
+    max-width: 350px;
+    width: 210px;
     height: minmax(300px, auto);
     background: var(--background-color);
     border-radius: 20px;
     grid-template-areas:
+        "clear-entry clear-entry clear-entry"
         "clear divide multiply"
         "add subtract percent"
         "seven eight nine"
         "four five six"
         "one two three"
         "zero decimal equals";
-
+    box-shadow:
+        0 0 10px rgba(0, 0, 0, 0.75),
+        0 0 25px rgba(18, 127, 223, 0.752);
 }
 
 /* items  */
+#clear-entry {
+    grid-area: clear-entry;
+    grid-column: span 3;
+}
+
 #clear {
     grid-area: clear;
 }
