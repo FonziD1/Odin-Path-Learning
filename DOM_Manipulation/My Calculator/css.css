@@ -66,6 +66,7 @@
 #clear-entry {
     grid-area: clear-entry;
     grid-column: span 3;
+    width: 100%;
 }
 
 #clear {

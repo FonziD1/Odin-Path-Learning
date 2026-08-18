@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="styles.css" />
+  <title>Speaker Submission Form</title>
+</head>
+
+<body>
+  <header class="speaker-form-header">
+    <h1>Speaker Submission</h1>
+    <p><em>Want to speak at our fake conference? Fill out this form.</em></p>
+  </header>
+
+  <form action="" method="GET" class="speaker-form">
+    <div class="form-row">
+      <label for="full-name">Name</label>
+      <input type="text" name="full-name" id="full-name">
+    </div>
+    <div class="form-row">
+      <label for="email">Email</label>
+      <input id="email" name="email" type="email" placeholder="[EMAIL_ADDRESS]" />
+    </div>
+
+    <fieldset class="legacy-form-row">
+      <legend>Type of Talk</legend>
+      <input type="radio" id="talk-type-1" name="talk-type" type="radio" value="main-stage">
+      <label for="talk-type-1">Main Stage</label>
+
+      <input type="radio" id="talk-type-2" name="talk-type" value="workshop" checked>
+      <label for="talk-type-2">Workshop</label>
+
+      <input type="radio" id="talk-type-3" name="talk-type" value="lightning-talk">
+      <label for="talk-type-3">Lightning Talk</label>
+    </fieldset>
+
+    <div class="form-row">
+      <label for="t-shirt">T-Shirt Size</label>
+      <select name="t-shirt" id="t-shirt">
+        <option value="xs">Extra Small</option>
+        <option value="s">Small</option>
+        <option value="m">Medium</option>
+        <option value="l">Large</option>
+      </select>
+    </div>
+    <div class="form-row">
+      <label for="abstract">Abstract</label>
+      <textarea name="abstract" id="abstract" cols="50" rows="8"></textarea>
+      <div class="instructions">Describe your talk in 500 works or less</div>
+    </div>
+
+    <div class='form-row'>
+      <label class='checkbox-label' for='available'>
+        <input id='available' name='available' type='checkbox' value='is-available' />
+        <span>I’m actually available the date of the talk</span>
+      </label>
+    </div>
+
+    <div class='form-row'>
+      <button>Submit</button>
+    </div>
+
+  </form>
+
+
+</body>
+
+</html>
