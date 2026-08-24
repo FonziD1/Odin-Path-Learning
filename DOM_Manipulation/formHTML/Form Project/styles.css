@@ -1,0 +1,200 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+}
+
+.logo_page {
+    background: url("./src/form_background_image.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    height: 100vh;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.logo_banner {
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 16px 0;
+}
+
+.logo_banner img {
+    height: 100px;
+    width: auto;
+    object-fit: contain;
+}
+
+
+.form_page {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: stretch;
+    min-height: 100vh;
+    width: 100%;
+    padding: 0;
+}
+
+.text_colder {
+    padding: 20px 40px;
+    max-width: 700px;
+}
+
+.text_colder h3 {
+    margin: 0 0 10px 0;
+    font-size: 1.25rem;
+    color: #222;
+}
+
+.text_colder p {
+    margin: 0;
+    color: #555;
+    font-weight: 500;
+}
+
+form {
+    width: 100%;
+}
+
+/* Background strip spanning 100% of parent width */
+.form_holder {
+    width: 100%;
+    background-color: rgba(241, 240, 226, 0.327);
+    padding: 25px 40px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+}
+
+.form_holder h3 {
+    margin: 0 0 16px 0;
+    font-size: 1.1rem;
+    color: #333;
+}
+
+/* 2 Column layout that wraps cleanly */
+.label_input_holder {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(200px, 280px));
+    gap: 12px 36px;
+    width: 100%;
+}
+
+.input-group,
+.input_group {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    position: relative;
+}
+
+.input-group label,
+.input_group label {
+    margin-bottom: 6px;
+    font-size: 0.75rem;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+    color: #444;
+}
+
+.input-group input,
+.input_group input {
+    padding: 10px 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 0.95rem;
+    width: 100%;
+    transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+.input-group input:focus,
+.input_group input:focus {
+    outline: none;
+    border-color: #596D48;
+    box-shadow: 0 0 5px rgba(89, 109, 72, 0.4);
+}
+
+/* --- Validation Error States --- */
+.input-group.error input {
+    border-color: #d93025;
+    background-color: #fff8f8;
+}
+
+.input-group.error input:focus {
+    border-color: #d93025;
+    box-shadow: 0 0 5px rgba(217, 48, 37, 0.4);
+}
+
+.error_msg {
+    color: #d93025;
+    font-size: 0.75rem;
+    margin-top: 4px;
+    min-height: 16px;
+    /* Prevents layout jump when text appears */
+    font-weight: 500;
+}
+
+/* Submit section outside the background block */
+.submit_section {
+    padding: 25px 40px;
+    max-width: 600px;
+}
+
+.submit_btn {
+    background-color: #596D48;
+    color: white;
+    font-size: 1rem;
+    font-weight: 600;
+    padding: 12px 32px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+    transition: background-color 0.2s, transform 0.1s;
+}
+
+.submit_btn:hover {
+    background-color: #47583a;
+}
+
+.submit_btn:active {
+    transform: scale(0.98);
+}
+
+.login_text {
+    margin-top: 20px;
+    font-size: 0.95rem;
+    color: #444;
+}
+
+.login_text a {
+    color: #596D48;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.login_text a:hover {
+    text-decoration: underline;
+}
+
+/* Responsive wrap on narrower screens */
+@media (max-width: 900px) {
+    .label_input_holder {
+        grid-template-columns: 1fr;
+    }
+}

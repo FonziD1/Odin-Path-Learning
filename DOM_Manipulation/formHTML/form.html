@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="stylesheet" href="./Form Project/styles.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form for Primus Media</title>
+    <script src="./Form Project/js.js" defer></script>
+</head>
+
+<body>
+
+    <section class="logo_page">
+        <div class="logo_banner">
+            <img src="./Form Project/src/Whole logo created.png" alt="Primus media whole logo with text" height="100px">
+        </div>
+    </section>
+
+    <section class="form_page">
+
+        <section class="text_colder">
+            <h3>This is not a real online service. Use it for fictional purposes only!</h3>
+            <p>You know you want to.</p>
+        </section>
+
+        <!-- novalidate disables default browser tooltips so our custom red messages show -->
+        <form id="signup_form" action="#" method="post" novalidate>
+            <section class="form_holder">
+                <h3>Let's do this!</h3>
+                <section class="label_input_holder">
+                    <div class="input-group">
+                        <label for="first_name">First Name *</label>
+                        <input type="text" id="first_name" name="first_name" required>
+                        <span class="error_msg" id="first_name_error"></span>
+                    </div>
+
+                    <div class="input-group">
+                        <label for="last_name">Last Name *</label>
+                        <input type="text" id="last_name" name="last_name" required>
+                        <span class="error_msg" id="last_name_error"></span>
+                    </div>
+
+                    <div class="input-group">
+                        <label for="email">Email *</label>
+                        <input type="email" id="email" name="email" required>
+                        <span class="error_msg" id="email_error"></span>
+                    </div>
+
+                    <div class="input-group">
+                        <label for="phone">Phone Number</label>
+                        <input type="tel" id="phone" name="phone">
+                        <span class="error_msg" id="phone_error"></span>
+                    </div>
+
+                    <div class="input-group">   
+                        <label for="password">Password *</label>
+                        <input type="password" id="password" name="password" required>
+                        <span class="error_msg" id="password_error"></span>
+                    </div>
+
+                    <div class="input-group">
+                        <label for="confirm_password">Confirm Password *</label>
+                        <input type="password" id="confirm_password" name="confirm_password" required>
+                        <span class="error_msg" id="confirm_password_error"></span>
+                    </div>
+                </section>
+            </section>
+
+            <!-- Submit button and login link are outside the background block -->
+            <section class="submit_section">
+                <button type="submit" class="submit_btn">Create Account</button>
+                <p class="login_text">Already have an account? <a href="#">Log in</a></p>
+            </section>
+        </form>
+
+    </section>
+
+</body>
+
+</html>
